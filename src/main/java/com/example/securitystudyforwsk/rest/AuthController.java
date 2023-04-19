@@ -18,7 +18,7 @@ public class AuthController {
     }
 
     @GetMapping("/login?error")
-    public String errorPage(){
+    public String errorPage() {
         return "error";
     }
 }

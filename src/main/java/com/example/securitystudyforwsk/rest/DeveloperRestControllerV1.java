@@ -30,14 +30,14 @@ public class DeveloperRestControllerV1 {
 
     @PostMapping
     @PreAuthorize("hasRole('admin')")
-    public Developer create(@RequestBody Developer developer){
+    public Developer create(@RequestBody Developer developer) {
         this.DEVELOPERS.add(developer);
         return developer;
     }
 
     @DeleteMapping
     @PreAuthorize("hasRole('admin')")
-    public void deleteById (Long id){
+    public void deleteById(Long id) {
         this.DEVELOPERS.removeIf(developer -> developer.getId().equals(id));
     }
 
